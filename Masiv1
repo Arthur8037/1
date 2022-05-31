@@ -1,3 +1,4 @@
+//Завдання 1
 using System;
 
 namespace matrci1
@@ -6,16 +7,16 @@ namespace matrci1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите количество элементов массива: \t");
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
             int CountMas = int.Parse(Console.ReadLine());
             int[] mas = new int[CountMas];
-            Console.WriteLine("\n Введите ваш массив:");
+            Console.WriteLine("\n Введіть ваш масив:");
             for (int i =0; i <mas.Length;i++)
             {
                 
                 mas[i] = int.Parse(Console.ReadLine());
             }
-Console.WriteLine("Вывести все элементы с парными номерами:");
+Console.WriteLine("Вивести усі елементи номери яких є парними:");
             for (int i = 0; i < mas.Length; i++)
             {
                 if (i % 2 == 0)
@@ -29,3 +30,459 @@ Console.WriteLine("Вывести все элементы с парными но
         
     }
 }
+
+
+
+
+Завдання 2
+
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            
+              Console.WriteLine("\n Вивести усі елементи номери яких є парними:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                if(mas[i]%2==0)
+                {
+                    Console.WriteLine(mas[i]+ " ");
+                }    
+            }
+            
+            
+
+            Console.ReadLine();
+
+        }
+
+
+    }
+}
+
+
+
+
+Завдання 3
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            int counter=0;
+
+            Console.WriteLine("\n Вивести кількість позитивних елементів масиву:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                if(mas[i]>0)
+                {
+                    counter++;
+                }    
+            }
+            Console.WriteLine(counter);
+            
+            
+
+            Console.ReadLine();
+
+        }
+
+
+    }
+}
+
+
+
+Завдання 4
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            int counter=0;
+
+            Console.WriteLine("\n Вивести кількість елементів масиву, більших за попередній:");
+            for (int i = 1; i < mas.Length; i++)
+            {
+
+                if (mas[i] > mas[i - 1])
+                {
+                    counter++;
+                }    
+            }
+            Console.WriteLine(counter.ToString());
+            
+            
+
+            Console.ReadLine();
+
+        }
+
+
+    }
+}
+
+
+
+
+Завдання 5
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            int counter=0;
+
+            Console.WriteLine("\n Вивести слово YES,якщо є пара сусідніх елементів з однаковими знаками. ");
+            Console.WriteLine(" Інакше слід вивести слово NO.:");
+            for (int i = 0; i < mas.Length - 1; i++)
+            {
+
+                if (mas[i] > 0 && mas[i + 1] > 0 || mas[i] < 0 && mas[i + 1] < 0)
+
+                    ++counter;
+
+                
+
+            }
+            if (counter >= 2)
+
+                Console.WriteLine("\nYes");
+            else Console.WriteLine("\nNo");
+
+
+
+
+
+            Console.ReadLine();
+
+        }
+
+
+    }
+}
+
+
+
+
+Завдання 6
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            int counter=0;
+
+            Console.WriteLine("\n Вивести кількість елементів, у яких два сусідні і, при цьому, обидва сусідні елементи менші від даного: ");
+     
+
+            for (int i = 1; i < mas.Length-1; i++)
+            {
+
+                if (mas[i] < mas[i + 1]&& mas[i]<mas[i-1])
+
+                    counter++;
+
+                
+
+            }
+          Console.WriteLine(counter);
+
+
+
+
+
+            Console.ReadLine();
+
+        }
+
+
+    }
+}
+
+
+
+Завдання 7
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("\n Ваш масив :");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                Console.WriteLine(mas[i]);
+            }
+
+            Console.WriteLine("\n Вивести елементи масиву у зворотному порядку: ");
+            for (int i=mas.Length-1;i>=0;i--)
+            {
+                Console.WriteLine(mas[i]);
+            }
+
+            
+
+
+
+
+            Console.ReadLine();
+
+        }
+
+
+    }
+}
+
+
+
+
+Завдання 8
+
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("\n Ваш масив :");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                Console.WriteLine(mas[i]);
+            }
+
+            Console.WriteLine("\n Вивести масив, отриманий після перестановки елементів: ");
+            var rslt = exchange(mas);
+           
+            Console.WriteLine (string.Join(" ", rslt));
+            Console.ReadKey();
+
+        }
+        public static int[] exchange(int[] array)
+        {
+            int[] _temp_array = new int[array.Length];
+            array.CopyTo(_temp_array, 0);
+            for (int n = 0; n < array.Length; n += 2)
+            {
+                if ((n == array.Length - 1) && (array.Length % 2 == 1)) break;
+                int a = _temp_array[n];
+                int b = _temp_array[n + 1];
+                _temp_array[n] = b;
+                _temp_array[n + 1] = a;
+            }
+            return _temp_array;
+        }
+
+    }
+}
+
+
+
+Завдання 9
+
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("\n Ваш масив :");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                Console.WriteLine(mas[i]);
+            }
+
+            Console.WriteLine("\n Вивести масив, отриманий після зсуву елементів.: ");
+            int tmp = mas[mas.Length - 1];
+            for (int i = mas.Length - 2; i >=0; i--)
+            {
+                mas[i+1] = mas[i];
+                
+                
+            }
+            mas[0] = tmp;
+            for (int i=0;i<mas.Length;i++)
+            {
+                Console.WriteLine(mas[i]);
+            }
+            Console.ReadKey();
+
+        }
+        
+
+    }
+}
+
+
+
+
+Завдання 10
+
+
+
+
+using System;
+
+namespace matrci1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введіть кількість елементів масиву: \t");
+            int CountMas = int.Parse(Console.ReadLine());
+            int[] mas = new int[CountMas];
+            Console.WriteLine("\n Введіть ваш масив:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("\n Ваш масив :");
+            for (int i = 0; i < mas.Length; i++)
+            {
+
+                Console.WriteLine(mas[i]);
+            }
+
+            Console.WriteLine("\n Знайти найбільше число у масиві: ");
+            int max = mas[0];
+            for(int i=1;i<mas.Length;i++)
+            {
+                if(mas[i]>max)
+                {
+                    max = mas[i];
+                }
+            }
+            Console.WriteLine(max);
+            Console.ReadKey();
+
+        }
+        
+
+    }
+}
+
